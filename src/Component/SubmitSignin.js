@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Validation from "./Validation";
 import Dashboard from "./Dashboard";
 import FrontPage from "./FrontPage";
 
@@ -9,7 +10,7 @@ function SubmitSignin() {
 
   const SubmitSignin = () => {
     setFormIsSubmitted(true);
-    navigate("/Dashboard");
+    navigate("/dashboard");
   };
   return (
     <div>

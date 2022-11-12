@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: #b5179e;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  .container{
+    background: pink;
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .addevent-container{
+    background-color: #FFF;
+    min-width: 25vw;
+      height: 90vh;
+    padding: 30px;
+    border-radius:30px; 
+   
+}
+.addevent-title{
+    color: #b5179e;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .addevent-form{
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .addevent-input{
+    padding: 10px;
+    border-radius:20px;
+    border: 0.5px solid gainsboro;
+    font-size: 20px;
+  }
+  .add-event-button{
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #ab1dcf, #f80759);
+    box-shadow: rgba(0, 0, 0, 0.3)0px 19px 38px;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+  }

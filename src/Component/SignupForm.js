@@ -3,6 +3,7 @@ import SignupValidation from "./SignupValidation";
 import SubmitSignup from "./SubmitSignup";
 import FrontPage from "./FrontPage";
 import "../App.css";
+// import { useNavigate } from "react-router-dom";
 
 const SignupForm = ({ submitForm }) => {
   const [values, setValues] = useState({
@@ -21,11 +22,13 @@ const SignupForm = ({ submitForm }) => {
       [event.target.name]: event.target.value,
     });
   };
+  // const navigate = useNavigate();
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
     setErrors(SignupValidation(values));
     setDataIsCorrect(true);
+    // navigate("/signin");
   };
 
   useEffect(() => {

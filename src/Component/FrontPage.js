@@ -21,11 +21,12 @@ const FrontPage = ({ SubmitSignin }) => {
       [event.target.name]: event.target.value,
     });
   };
-
+  // const navigate = useNavigate();
   const frontPageHandleSubmit = (event) => {
     event.preventDefault();
     setErrors(Validation(values));
     setDataIsCorrect(true);
+    // navigate("/dashboard");
   };
 
   useEffect(() => {
@@ -115,6 +116,15 @@ const FrontPage = ({ SubmitSignin }) => {
               <div className="frontpage_link">
                 <img src="..\images\twitter.png" />
               </div>
+              {/* <a href="#" className="login100-social-item bg1">
+									<i className="fa fa-facebook" />
+								</a>
+								<a href="#" className="login100-social-item bg2">
+									<i className="fa fa-twitter" />
+								</a>
+								<a href="#" className="login100-social-item bg3">
+									<i className="fa fa-google" />
+								</a> */}
             </div>
           </div>
         </form>

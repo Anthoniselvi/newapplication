@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SignupValidation from "./SignupValidation";
 import SignupForm from "./SignupForm";
 import Dashboard from "./Dashboard";
 import FrontPage from "./FrontPage";
