@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./AddEntry.css";
 
 function Entry() {
-  let [array, setArray] = useState([]);
-  let [inputData, setInputData] = useState({
+  const [array, setArray] = useState([]);
+  const [inputData, setInputData] = useState({
     name: "",
     city: "",
     number: "",
@@ -13,12 +13,13 @@ function Entry() {
     setInputData({ ...inputData, [e.target.name]: e.target.value });
   }
 
-  let { name, number } = inputData;
+  function addInputData(e) {
+    e.preventDefault();
+    const { name, number } = inputData;
 
-  function addInputData() {
     setArray([...array, { name, number }]);
-    console.log(inputData);
-    setInputData({ name: "", number: "" });
+    console.log(array.length, array);
+    // setInputData({ name: "", number: "" });
   }
 
   // function deleteData(i) {
@@ -30,7 +31,7 @@ function Entry() {
     <div className="container">
       <div className="entry-container">
         <h1 className="title">Add New People</h1>
-        <form>
+        <form onSubmit={addInputData}>
           <input
             type="text"
             placeholder="Name"
@@ -55,20 +56,20 @@ function Entry() {
             value={inputData.number || ""}
           />
 
-          <button className="add-button" onClick={addInputData}>
+          <button className="add-button" type="submit">
             Add
           </button>
         </form>
 
-        {array &&
-          array.map((item, i) => {
-            return (
-              <table className="table-list">
-                <tbody>
-                  <tr className="table-row">
-                    <th className="table-cell">Name</th>
-                    <th className="table-cell">Amount</th>
-                  </tr>
+        <table className="table-list">
+          <tbody>
+            <tr className="table-row">
+              <th className="table-cell">Name</th>
+              <th className="table-cell">Amount</th>
+            </tr>
+            {array &&
+              array.map((item, i) => {
+                return (
                   <tr key={i} className="table-row">
                     <td className="table-cell">{item.name}</td>
                     <td className="table-cell">{item.number}</td>
@@ -79,10 +80,10 @@ function Entry() {
                       <button onClick={() => deleteData(i)}>Delete</button>
                     </td> */}
                   </tr>
-                </tbody>
-              </table>
-            );
-          })}
+                );
+              })}
+          </tbody>
+        </table>
       </div>
     </div>
   );
