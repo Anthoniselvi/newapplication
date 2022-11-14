@@ -9,7 +9,7 @@ function Dashboard() {
   const navigate = useNavigate();
 
   function moveToAddEntry() {
-    navigate("/AddEntry");
+    navigate("/Entry");
   }
 
   return (

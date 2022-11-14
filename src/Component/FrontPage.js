@@ -26,7 +26,7 @@ const FrontPage = ({ SubmitSignin }) => {
     event.preventDefault();
     setErrors(Validation(values));
     setDataIsCorrect(true);
-    // navigate("/dashboard");
+    navigate("/dashboard");
   };
 
   useEffect(() => {

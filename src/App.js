@@ -6,11 +6,13 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import SubmitSignin from "./Component/SubmitSignin";
 import SignupForm from "./Component/SignupForm";
 import AddEvent from "./Component/AddEvent";
+import Entry from "./Component/Entry";
 import AddEntry from "./Component/AddEntry";
 
 function App() {
   return (
     <div className="container">
+      {/* <Entry /> */}
       {/* <SignupForm /> */}
       <BrowserRouter>
         <Routes>
@@ -21,6 +23,7 @@ function App() {
             <Route path="signup" element={<SignupForm />} />
             <Route path="addevent" element={<AddEvent />} />
             <Route path="addentry" element={<AddEntry />} />
+            <Route path="entry" element={<Entry />} />
           </Route>
         </Routes>
       </BrowserRouter>

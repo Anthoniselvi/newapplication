@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Table from "react";
 import "./AddEntry.css";
+import { FaInfo } from "react-icons/fa";
 
 function AddEntry() {
   const [formData, setFormData] = useState({
@@ -102,10 +103,22 @@ function AddEntry() {
           <button className="add-button">Add</button>
         </form>
 
-        <ul>
-          <li>Name</li>
-          <li>Amount</li>
-        </ul>
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>Amount</td>
+            </tr>
+            {formData.map((info, ind) => {
+              return (
+                <tr key={ind}>
+                  <td>{info.name}</td>
+                  <td>{info.amount}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );

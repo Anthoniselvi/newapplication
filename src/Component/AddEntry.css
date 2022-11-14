@@ -73,19 +73,25 @@
   }
   .add-button{
     padding: 10px;
+    margin-bottom: 20px;
     border-radius: 20px;
     background: linear-gradient(to right, #ab1dcf, #f80759);
-    box-shadow: rgba(0, 0, 0, 0.3)0px 19px 38px;
+    box-shadow: rgba(0, 0, 0, 0.3)0px 10px 20px;
     border: none;
     color: #ffffff;
     font-size: 1.5rem;
   }
 
-  ul{
+  .table-list{
+    padding: 20px;
+    width: 100%;
+  }
+  .table-row{
     padding: 10px;
-    margin: 30px 10px;
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    border: 0.5px solid gainsboro;
+  }
+  .table-cell{
+    width: 50%;
+    padding: 20px;
+    border:1px solid grey;
+    text-align: center;
   }
